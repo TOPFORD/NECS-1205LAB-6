@@ -1,0 +1,81 @@
+html, body, #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* ป้องกันการ Scroll ซ้อน */
+}
+
+.list-container {
+    min-height: 100vh;
+    background: #121212;
+    padding: 40px;
+    color: white;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    letter-spacing: 5px;
+    color: #ffcb05;
+    text-shadow: 3px 3px 0 #3b5ca8;
+}
+
+/* จัดเรียงเป็น Grid ให้แสดงหลายตัว */
+.pokemon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.pokemon-card {
+    background: #1e1e1e;
+    border-radius: 20px;
+    padding: 25px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.pokemon-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.id-tag {
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.card-image {
+    width: 100%;
+    max-width: 180px;
+    margin: 10px 0;
+}
+
+.type-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.quick-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    background: rgba(255,255,255,0.05);
+    padding: 10px;
+    border-radius: 10px;
+}
